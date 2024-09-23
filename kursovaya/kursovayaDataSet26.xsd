@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="kursovayaDataSet26" targetNamespace="http://tempuri.org/kursovayaDataSet26.xsd" xmlns:mstns="http://tempuri.org/kursovayaDataSet26.xsd" xmlns="http://tempuri.org/kursovayaDataSet26.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="kursovayaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="kursovayaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.kursovaya.Properties.Settings.GlobalReference.Default.kursovayaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Results_RUTableAdapter" GeneratorDataComponentClassName="Results_RUTableAdapter" Name="Results_RU" UserDataComponentName="Results_RUTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="kursovayaConnectionString (Settings)" DbObjectName="dbo.Results_RU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT N_пп, ID_Бегуна, Название_марафона, Финишное_Время, Место_Бегуна FROM dbo.Results_RU</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="N_пп" DataSetColumn="N_пп" />
+              <Mapping SourceColumn="ID_Бегуна" DataSetColumn="ID_Бегуна" />
+              <Mapping SourceColumn="Название_марафона" DataSetColumn="Название_марафона" />
+              <Mapping SourceColumn="Финишное_Время" DataSetColumn="Финишное_Время" />
+              <Mapping SourceColumn="Место_Бегуна" DataSetColumn="Место_Бегуна" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="kursovayaDataSet26" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="kursovayaDataSet26" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="kursovayaDataSet26">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Results_RU" msprop:Generator_RowEvHandlerName="Results_RURowChangeEventHandler" msprop:Generator_RowDeletedName="Results_RURowDeleted" msprop:Generator_RowDeletingName="Results_RURowDeleting" msprop:Generator_RowEvArgName="Results_RURowChangeEvent" msprop:Generator_TablePropName="Results_RU" msprop:Generator_RowChangedName="Results_RURowChanged" msprop:Generator_UserTableName="Results_RU" msprop:Generator_RowChangingName="Results_RURowChanging" msprop:Generator_RowClassName="Results_RURow" msprop:Generator_TableClassName="Results_RUDataTable" msprop:Generator_TableVarName="tableResults_RU">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="N_пп" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="N_ппColumn" msprop:Generator_ColumnPropNameInRow="N_пп" msprop:Generator_UserColumnName="N_пп" msprop:Generator_ColumnVarNameInTable="columnN_пп" type="xs:int" />
+              <xs:element name="ID_Бегуна" msprop:Generator_ColumnPropNameInTable="ID_БегунаColumn" msprop:Generator_ColumnPropNameInRow="ID_Бегуна" msprop:Generator_UserColumnName="ID_Бегуна" msprop:Generator_ColumnVarNameInTable="columnID_Бегуна" type="xs:int" minOccurs="0" />
+              <xs:element name="Название_марафона" msprop:Generator_ColumnPropNameInTable="Название_марафонаColumn" msprop:Generator_ColumnPropNameInRow="Название_марафона" msprop:Generator_UserColumnName="Название_марафона" msprop:Generator_ColumnVarNameInTable="columnНазвание_марафона" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Финишное_Время" msprop:Generator_ColumnPropNameInTable="Финишное_ВремяColumn" msprop:Generator_ColumnPropNameInRow="Финишное_Время" msprop:Generator_UserColumnName="Финишное_Время" msprop:Generator_ColumnVarNameInTable="columnФинишное_Время" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Место_Бегуна" msprop:Generator_ColumnPropNameInTable="Место_БегунаColumn" msprop:Generator_ColumnPropNameInRow="Место_Бегуна" msprop:Generator_UserColumnName="Место_Бегуна" msprop:Generator_ColumnVarNameInTable="columnМесто_Бегуна" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Results_RU" />
+      <xs:field xpath="mstns:N_пп" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

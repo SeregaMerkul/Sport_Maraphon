@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{806A91BC-2FD7-4997-B273-7E23FD47952B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kursovaya</RootNamespace>
+    <AssemblyName>kursovaya</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBalance.Designer.cs">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFonds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFonds.Designer.cs">
+      <DependentUpon>AddFonds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResultsForm.Designer.cs">
+      <DependentUpon>AddResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSponsorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSponsorForm.Designer.cs">
+      <DependentUpon>AddSponsorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthMenu.Designer.cs">
+      <DependentUpon>AuthMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckpointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckpointForm.Designer.cs">
+      <DependentUpon>CheckpointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AuthUser.cs" />
+    <Compile Include="Components\FormDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FormDesign.Designer.cs">
+      <DependentUpon>FormDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Drawer.cs" />
+    <Compile Include="Components\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Test_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet151.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet151.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_Sport_MarathonDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase_Sport_MarathonDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFormRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFormRunner.Designer.cs">
+      <DependentUpon>EditFormRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FondsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FondsForm.Designer.cs">
+      <DependentUpon>FondsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSponsorReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSponsorReg.Designer.cs">
+      <DependentUpon>FormSponsorReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glav.Designer.cs">
+      <DependentUpon>Glav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kursovayaDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursovayaDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogAdmin.Designer.cs">
+      <DependentUpon>LogAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogRunner.Designer.cs">
+      <DependentUpon>LogRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogSponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogSponsor.Designer.cs">
+      <DependentUpon>LogSponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreInfo.Designer.cs">
+      <DependentUpon>MoreInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoreInfoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreInfoMenu.Designer.cs">
+      <DependentUpon>MoreInfoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyResults.Designer.cs">
+      <DependentUpon>MyResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyRunner.Designer.cs">
+      <DependentUpon>MyRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySponsor.Designer.cs">
+      <DependentUpon>MySponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegMarathon.Designer.cs">
+      <DependentUpon>RegMarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegRunner.Designer.cs">
+      <DependentUpon>RegRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegRunnerFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegRunnerFinish.Designer.cs">
+      <DependentUpon>RegRunnerFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultsForm.Designer.cs">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorsForm.Designer.cs">
+      <DependentUpon>SponsorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorsMenu.Designer.cs">
+      <DependentUpon>SponsorsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorsRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorsRequests.Designer.cs">
+      <DependentUpon>SponsorsRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thanks.Designer.cs">
+      <DependentUpon>Thanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanksSponsors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanksSponsors.Designer.cs">
+      <DependentUpon>ThanksSponsors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WantRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WantRunner.Designer.cs">
+      <DependentUpon>WantRunner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBalance.resx">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFonds.resx">
+      <DependentUpon>AddFonds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddResultsForm.resx">
+      <DependentUpon>AddResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSponsorForm.resx">
+      <DependentUpon>AddSponsorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthMenu.resx">
+      <DependentUpon>AuthMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckpointForm.resx">
+      <DependentUpon>CheckpointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFormRunner.resx">
+      <DependentUpon>EditFormRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FondsForm.resx">
+      <DependentUpon>FondsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSponsorReg.resx">
+      <DependentUpon>FormSponsorReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glav.resx">
+      <DependentUpon>Glav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogAdmin.resx">
+      <DependentUpon>LogAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogRunner.resx">
+      <DependentUpon>LogRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogSponsor.resx">
+      <DependentUpon>LogSponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreInfo.resx">
+      <DependentUpon>MoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreInfoMenu.resx">
+      <DependentUpon>MoreInfoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyResults.resx">
+      <DependentUpon>MyResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyRunner.resx">
+      <DependentUpon>MyRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySponsor.resx">
+      <DependentUpon>MySponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegMarathon.resx">
+      <DependentUpon>RegMarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegRunner.resx">
+      <DependentUpon>RegRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegRunnerFinish.resx">
+      <DependentUpon>RegRunnerFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultsForm.resx">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorsForm.resx">
+      <DependentUpon>SponsorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorsMenu.resx">
+      <DependentUpon>SponsorsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorsRequests.resx">
+      <DependentUpon>SponsorsRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thanks.resx">
+      <DependentUpon>Thanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanksSponsors.resx">
+      <DependentUpon>ThanksSponsors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WantRunner.resx">
+      <DependentUpon>WantRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataBase_Sport_MarathonDataSet.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet1.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet1.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet10.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet10.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet11.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet11.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet12.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet12.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet13.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet13.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet14.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet14.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet151.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet151.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet151.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet151.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet2.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet2.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet3.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet3.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet4.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet4.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet5.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet5.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet6.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet6.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet7.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet7.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet8.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet8.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet9.xsc">
+      <DependentUpon>DataBase_Sport_MarathonDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase_Sport_MarathonDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase_Sport_MarathonDataSet9.xss">
+      <DependentUpon>DataBase_Sport_MarathonDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet.xsc">
+      <DependentUpon>kursovayaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet.xss">
+      <DependentUpon>kursovayaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet1.xsc">
+      <DependentUpon>kursovayaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet1.xss">
+      <DependentUpon>kursovayaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet10.xsc">
+      <DependentUpon>kursovayaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet10.xss">
+      <DependentUpon>kursovayaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet11.xsc">
+      <DependentUpon>kursovayaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet11.xss">
+      <DependentUpon>kursovayaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet12.xsc">
+      <DependentUpon>kursovayaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet12.xss">
+      <DependentUpon>kursovayaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet13.xsc">
+      <DependentUpon>kursovayaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet13.xss">
+      <DependentUpon>kursovayaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet14.xsc">
+      <DependentUpon>kursovayaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet14.xss">
+      <DependentUpon>kursovayaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet15.xsc">
+      <DependentUpon>kursovayaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet15.xss">
+      <DependentUpon>kursovayaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet16.xsc">
+      <DependentUpon>kursovayaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet16.xss">
+      <DependentUpon>kursovayaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet17.xsc">
+      <DependentUpon>kursovayaDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet17.xss">
+      <DependentUpon>kursovayaDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet18.xsc">
+      <DependentUpon>kursovayaDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet18.xss">
+      <DependentUpon>kursovayaDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet19.xsc">
+      <DependentUpon>kursovayaDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet19.xss">
+      <DependentUpon>kursovayaDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet2.xsc">
+      <DependentUpon>kursovayaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet2.xss">
+      <DependentUpon>kursovayaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet20.xsc">
+      <DependentUpon>kursovayaDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet20.xss">
+      <DependentUpon>kursovayaDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet21.xsc">
+      <DependentUpon>kursovayaDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet21.xss">
+      <DependentUpon>kursovayaDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet22.xsc">
+      <DependentUpon>kursovayaDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet22.xss">
+      <DependentUpon>kursovayaDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet23.xsc">
+      <DependentUpon>kursovayaDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet23.xss">
+      <DependentUpon>kursovayaDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet24.xsc">
+      <DependentUpon>kursovayaDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet24.xss">
+      <DependentUpon>kursovayaDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet25.xsc">
+      <DependentUpon>kursovayaDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet25.xss">
+      <DependentUpon>kursovayaDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet26.xsc">
+      <DependentUpon>kursovayaDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet26.xss">
+      <DependentUpon>kursovayaDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet27.xsc">
+      <DependentUpon>kursovayaDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet27.xss">
+      <DependentUpon>kursovayaDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet28.xsc">
+      <DependentUpon>kursovayaDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet28.xss">
+      <DependentUpon>kursovayaDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet29.xsc">
+      <DependentUpon>kursovayaDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet29.xss">
+      <DependentUpon>kursovayaDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet3.xsc">
+      <DependentUpon>kursovayaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet3.xss">
+      <DependentUpon>kursovayaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet4.xsc">
+      <DependentUpon>kursovayaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet4.xss">
+      <DependentUpon>kursovayaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet5.xsc">
+      <DependentUpon>kursovayaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet5.xss">
+      <DependentUpon>kursovayaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet6.xsc">
+      <DependentUpon>kursovayaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet6.xss">
+      <DependentUpon>kursovayaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet7.xsc">
+      <DependentUpon>kursovayaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet7.xss">
+      <DependentUpon>kursovayaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet8.xsc">
+      <DependentUpon>kursovayaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet8.xss">
+      <DependentUpon>kursovayaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet9.xsc">
+      <DependentUpon>kursovayaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="kursovayaDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursovayaDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursovayaDataSet9.xss">
+      <DependentUpon>kursovayaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase_Sport_Marathon.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase_Sport_Marathon_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DataBase_Sport_Marathon.mdf</DependentUpon>
+    </Content>
+    <Content Include="kursovaya.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="kursovaya_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>kursovaya.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\7.PNG" />
+    <None Include="Resources\Без имени-1.png" />
+    <None Include="Resources\test123.png" />
+    <None Include="Resources\аааbbb123.png" />
+    <None Include="Resources\аааbbb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

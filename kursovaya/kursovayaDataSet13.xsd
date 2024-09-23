@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="kursovayaDataSet13" targetNamespace="http://tempuri.org/kursovayaDataSet13.xsd" xmlns:mstns="http://tempuri.org/kursovayaDataSet13.xsd" xmlns="http://tempuri.org/kursovayaDataSet13.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="kursovayaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="kursovayaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.kursovaya.Properties.Settings.GlobalReference.Default.kursovayaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PossibleSponsors_RUTableAdapter" GeneratorDataComponentClassName="PossibleSponsors_RUTableAdapter" Name="PossibleSponsors_RU" UserDataComponentName="PossibleSponsors_RUTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="kursovayaConnectionString (Settings)" DbObjectName="dbo.PossibleSponsors_RU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Название_Компании, [Эл.Почта], ИНН, Фонд, Сумма FROM dbo.PossibleSponsors_RU</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Название_Компании" DataSetColumn="Название_Компании" />
+              <Mapping SourceColumn="Эл.Почта" DataSetColumn="Эл_Почта" />
+              <Mapping SourceColumn="ИНН" DataSetColumn="ИНН" />
+              <Mapping SourceColumn="Фонд" DataSetColumn="Фонд" />
+              <Mapping SourceColumn="Сумма" DataSetColumn="Сумма" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="kursovayaDataSet13" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="kursovayaDataSet13" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="kursovayaDataSet13">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PossibleSponsors_RU" msprop:Generator_RowEvHandlerName="PossibleSponsors_RURowChangeEventHandler" msprop:Generator_RowDeletedName="PossibleSponsors_RURowDeleted" msprop:Generator_RowDeletingName="PossibleSponsors_RURowDeleting" msprop:Generator_RowEvArgName="PossibleSponsors_RURowChangeEvent" msprop:Generator_TablePropName="PossibleSponsors_RU" msprop:Generator_RowChangedName="PossibleSponsors_RURowChanged" msprop:Generator_UserTableName="PossibleSponsors_RU" msprop:Generator_RowChangingName="PossibleSponsors_RURowChanging" msprop:Generator_RowClassName="PossibleSponsors_RURow" msprop:Generator_TableClassName="PossibleSponsors_RUDataTable" msprop:Generator_TableVarName="tablePossibleSponsors_RU">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Название_Компании" msprop:Generator_ColumnPropNameInTable="Название_КомпанииColumn" msprop:Generator_ColumnPropNameInRow="Название_Компании" msprop:Generator_UserColumnName="Название_Компании" msprop:Generator_ColumnVarNameInTable="columnНазвание_Компании" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Эл_Почта" msprop:Generator_ColumnPropNameInTable="Эл_ПочтаColumn" msprop:Generator_ColumnPropNameInRow="Эл_Почта" msprop:Generator_UserColumnName="Эл_Почта" msprop:Generator_ColumnVarNameInTable="columnЭл_Почта" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ИНН" msprop:Generator_ColumnPropNameInTable="ИННColumn" msprop:Generator_ColumnPropNameInRow="ИНН" msprop:Generator_UserColumnName="ИНН" msprop:Generator_ColumnVarNameInTable="columnИНН" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Фонд" msprop:Generator_ColumnPropNameInTable="ФондColumn" msprop:Generator_ColumnPropNameInRow="Фонд" msprop:Generator_UserColumnName="Фонд" msprop:Generator_ColumnVarNameInTable="columnФонд" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Сумма" msprop:Generator_ColumnPropNameInTable="СуммаColumn" msprop:Generator_ColumnPropNameInRow="Сумма" msprop:Generator_UserColumnName="Сумма" msprop:Generator_ColumnVarNameInTable="columnСумма" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
